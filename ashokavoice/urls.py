@@ -20,5 +20,6 @@ from usuario.views import CreateUsuario
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('put/<int:usuario_id>', CreateUsuario.as_view(), name='UpdateUsuario'),
     path('put/', CreateUsuario.as_view(), name='CreateUsuario'),
 ]
