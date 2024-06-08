@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'ashokavoice.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'proyecto1',
+        'USER': 'postgres',
+        'PASSWORD': 'aresly27',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
