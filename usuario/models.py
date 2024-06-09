@@ -8,6 +8,8 @@ class Usuario(models.Model):
     usuario = models.CharField(max_length=120, verbose_name="Usuario")
     password = models.CharField(max_length=120, verbose_name="Contraseña")
     imagen = models.CharField(max_length=120, verbose_name="Imagen")
+    created_date = models.DateField(auto_now_add=True, verbose_name="Fecha de creación")
+    status = models.BooleanField(default=True, verbose_name="Estatus")
     
     class Meta:
         db_table = 'usuario'

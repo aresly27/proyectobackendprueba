@@ -27,3 +27,9 @@ class CreateUsuario(APIView):
         
         return Response(serializer.data, status=status.HTTP_200_OK)
     
+
+    def delete(self, request, usuario_id):
+        usuario_obj = get_object_or_404(Usuario, pk=usuario_id)
+        usuario_obj.status=False
+        usuario_obj.save()
+        return Response({'message':'Eliminado'}, status=status.HTTP_204_NO_CONTENT)

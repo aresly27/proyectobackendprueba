@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'ashokavoice.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'proyecto1',
+        'NAME': 'proyectobackend',
         'USER': 'postgres',
         'PASSWORD': 'aresly27',
         'HOST': 'localhost',
