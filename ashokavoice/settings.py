@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'login'
 ]
 
+AUTH_USER_MODEL = 'usuario.Usuario'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -85,6 +87,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
 
 
 # Password validation

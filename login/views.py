@@ -3,6 +3,7 @@ from django.shortcuts import get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.request import Request
 from rest_framework import status
 from rest_framework.permissions import AllowAny
 from usuario.models import Usuario
@@ -17,6 +18,8 @@ class LoginView(APIView):
         correo = request.data.get('correo')
         password = request.data.get('password')
         user = authenticate(username=correo, password=password)
+        print(correo)
+        print(password)
         print(user)
         if user is not None:
             usuario_obj = Usuario.objects.get(correo=correo)
