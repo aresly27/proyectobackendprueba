@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from usuario.views import CreateUsuario
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('delete/<int:usuario_id>', CreateUsuario.as_view(), name='DeleteUsuario'),
 ]
