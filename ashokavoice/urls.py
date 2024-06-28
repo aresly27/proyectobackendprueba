@@ -26,6 +26,5 @@ urlpatterns = [
     path('put/', CreateUsuario.as_view(), name='CreateUsuario'),
     path('delete/<int:usuario_id>', CreateUsuario.as_view(), name='DeleteUsuario'),
     
-    path('put/logro', LogroView.as_view(), name='Crear logro'),
-    path('put/logro/<int:logro_id>', LogroView.as_view(), name='UpdateLogro'),
+    path('put/logro', LogroView.as_view(), name='Crear ,logro'),
 ]
