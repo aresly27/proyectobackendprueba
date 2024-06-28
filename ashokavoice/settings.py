@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'usuario',
+    'logro',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +79,7 @@ WSGI_APPLICATION = 'ashokavoice.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'proyectobackend',
+        'NAME': 'proyecto_backend',
         'USER': 'postgres',
         'PASSWORD': 'aresly27',
         'HOST': 'localhost',
