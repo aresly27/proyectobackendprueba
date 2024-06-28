@@ -26,9 +26,3 @@ class LogroView(APIView):
         
         return Response(serializer.data, status=status.HTTP_200_OK)
     
-    
-    def get(self,request):
-        lista_list = Logro.objects.all()
-        serializer = LogroSerializer(lista_list, many=True)
-        
-        return Response(serializer.data)
